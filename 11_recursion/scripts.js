@@ -1,10 +1,15 @@
-function retornarNumeroPar(n) {
-  if (n % 2 == 0) {
-    console.log("n agora é par " + n);
+function recursao(n) {
+  if (n < 2) {
+    console.log("Recursao parou");
+  } else if (n % 2 != 0) {
+    console.log("numero impar");
+    recursao(n - 1);
   } else {
-    console.log(n);
-    retornarNumeroPar(n - 1);
+    console.log("numero par");
+    recursao(n - 2);
   }
 }
 
-retornarNumeroPar(33);
+recursao(39);
+recursao(22);
+recursao(55);
